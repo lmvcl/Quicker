@@ -1,0 +1,8 @@
+翻译|https://translate.google.cn/translate_a/single
+百度|$$https://www.baidu.com/s?ie=UTF-8&wd={Text}
+腾讯|$$https://v.qq.com/x/search/?q={Text}
+优酷|$$https://so.youku.com/search_video/q_{Text}
+奇艺|$$https://so.iqiyi.com/so/q_{Text}
+贴吧|$$http://tieba.baidu.com/f/search/res?ie=utf-8&qw={Text}
+淘宝|$$https://s.taobao.com/search?q={Text}
+京东|$$https://search.jd.com/Search?keyword={Text}&enc=utf-8
