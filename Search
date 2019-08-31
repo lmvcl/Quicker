@@ -1,4 +1,4 @@
-翻译|https://translate.google.cn/translate_a/single
+翻译|$$https://translate.google.cn/translate_a/single
 百度|$$https://www.baidu.com/s?ie=UTF-8&wd={Text}
 腾讯|$$https://v.qq.com/x/search/?q={Text}
 优酷|$$https://so.youku.com/search_video/q_{Text}
