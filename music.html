@@ -1,1 +1,19 @@
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2250011882&auto=1&height=90"></iframe>
+<html>
+<head>
+<title>测试</title>
+<script language="javascript"> //JavaScript脚本标注
+var newWin;
+var timer;
+  
+function subWinClose() {
+    if (newWin.closed == true) {
+      alert('刷新');
+        window.clearInterval(timer);
+    }
+}
+function open_win() {
+     timer = window.setInterval("subWinClose()", 500);
+}
+</script>
+</head>
+</html>
