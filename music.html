@@ -2,10 +2,12 @@
 <head>
 <title>测试</title>
 <script language="javascript"> //JavaScript脚本标注
-function closeWin(){
-alert('刷新');
-setTimeout('closeWin()',5000);
-}
+function myrefresh() 
+{ 
+  alert('刷新');
+  window.location.reload(); 
+} 
+setTimeout('myrefresh()',10000); //指定1秒刷新一次 
 </script>
 </head>
 </html>
