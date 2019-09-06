@@ -14,7 +14,7 @@ function getQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
     }
-	var url = GetQueryString("url");
+	var url = getQueryString("url");
 </Script>
 <video id="video" class="zoomed_mode" controls="" src=url></video>
 <script src="https://github.com/lmvcl/Quicker/raw/master/global.js"></script>
