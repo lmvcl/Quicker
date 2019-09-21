@@ -81,7 +81,10 @@ function playM3u8(url){
   document.title = url
 }
 $(window).bind('hashchange', function() {
-  debug = false;
-  native = false;
   playM3u8(window.location.href.split("#")[1]);
 });
+function() {
+  debug = false;
+  native = false;
+  playM3u8(window.location.href.split("#")[1]); 
+};
