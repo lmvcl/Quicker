@@ -91,3 +91,4 @@ function(settings) {
 $(window).bind('hashchange', function() {
   playM3u8(window.location.href.split("#")[1]);
 });
+function(1);
