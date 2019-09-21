@@ -81,23 +81,6 @@ function playM3u8(url){
   document.title = url
 }
 
-chrome.storage.local.get({
-  hlsjs: currentVersion,
-  debug: false,
-  native: false
-}, function(settings) {
-  debug = settings.debug;
-  native = settings.native;
-  var s = document.createElement('script');
-  var version = currentVersion
-  if (supportedVersions.includes(settings.hlsjs)) {
-    version = settings.hlsjs
-  }
-  s.src = chrome.runtime.getURL('hls.'+version+'.min.js');
-  s.onload = function() { playM3u8(window.location.href.split("#")[1]); };
-  (document.head || document.documentElement).appendChild(s);
-});
-
 $(window).bind('hashchange', function() {
   playM3u8(window.location.href.split("#")[1]);
 });
