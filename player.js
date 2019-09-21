@@ -86,5 +86,8 @@ $(window).bind('hashchange', function() {
 $(function () {
   debug = false;
   native = false;
+  var s = document.createElement('script');
+  s.src = "hls.0.12.4.min.js";
+  (document.head || document.documentElement).appendChild(s);
   playM3u8(window.location.href.split("#")[1]); 
 });
