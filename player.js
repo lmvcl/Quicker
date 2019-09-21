@@ -93,7 +93,7 @@ chrome.storage.local.get({
   if (supportedVersions.includes(settings.hlsjs)) {
     version = settings.hlsjs
   }
-  s.src = chrome.runtime.getURL('hlsjs/hls.'+version+'.min.js');
+  s.src = chrome.runtime.getURL('hls.'+version+'.min.js');
   s.onload = function() { playM3u8(window.location.href.split("#")[1]); };
   (document.head || document.documentElement).appendChild(s);
 });
