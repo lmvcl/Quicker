@@ -50,7 +50,7 @@ function playM3u8(url){
     video.classList.remove("native_mode");
     video.classList.add("zoomed_mode");
   }
-  hls = new Hls();
+  hls = new Hls({debug:false});
   var m3u8Url = decodeURIComponent(url)
   hls.loadSource(m3u8Url);
   hls.attachMedia(video);
