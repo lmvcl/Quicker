@@ -42,6 +42,8 @@ function timeUpdateCallback() {
 }
 
 function playM3u8(url){
+  debug = false;
+  native = false;
   var video = document.getElementById('video');
   if(native){
     video.classList.add("native_mode");
@@ -50,7 +52,8 @@ function playM3u8(url){
     video.classList.remove("native_mode");
     video.classList.add("zoomed_mode");
   }
-  hls = new Hls({false:false});
+  hls.destroy();
+  hls = new Hls({debug:debug});
   var m3u8Url = decodeURIComponent(url)
   hls.loadSource(m3u8Url);
   hls.attachMedia(video);
@@ -65,7 +68,6 @@ $(window).bind('hashchange', function() {
   playM3u8(window.location.href.split("#")[1]);
 });
 $(function () {
-  native = false;
   var s = document.createElement('script');
   s.src = "hls.0.12.4.min.js";
   (document.head || document.documentElement).appendChild(s);
