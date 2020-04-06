@@ -1,12 +1,12 @@
 <html>
-<head>
-  <title></title>
-</head>
-<body>
-  <script src="https://hls-js-f7dd4d19-24a5-4407-86f8-db287d0c53f0.netlify.com/dist/hls.js"></script>
-  <video id="video" controls autoplay class="videoCentered"></video>
+   <head>
+    <title></title>
+   </head>
+  <body>
+     <script src="https://hls-js-latest.netlify.com/dist/hls.js"></script>
+      <video id="video" controls autoplay class="videoCentered"></video>
       <script>
-	    var url = window.location.href.split("?")[1];
+	    var url = window.location.href.split("#")[1];
         if(Hls.isSupported()) {
           var video = document.getElementById('video');
           var hls = new Hls();
@@ -23,5 +23,5 @@
           });
         }
       </script>
-</body>
+  </body>
 </html>
