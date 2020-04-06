@@ -1,14 +1,27 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <script src="jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="hls.0.12.4.min.js"></script>
-  <script src="player.js"></script>
+  <title></title>
 </head>
 <body>
-  <video id="video" class="zoomed_mode" controls></video>
+  <script src="https://hls-js-f7dd4d19-24a5-4407-86f8-db287d0c53f0.netlify.com/dist/hls.js"></script>
+  <video id="video" controls autoplay class="videoCentered"></video>
+      <script>
+	    var url = window.location.href.split("?")[1];
+        if(Hls.isSupported()) {
+          var video = document.getElementById('video');
+          var hls = new Hls();
+          hls.loadSource(url);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED,function() {
+            video.play();
+        });
+       }
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = url;
+          video.addEventListener('canplay',function() {
+            video.play();
+          });
+        }
+      </script>
 </body>
 </html>
